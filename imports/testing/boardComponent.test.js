@@ -1,3 +1,5 @@
+// de nuevo, podrian remover el codigo no utilizado
+
 /* global describe*/
 /* global it*/
 /* global Meteor*/
@@ -40,6 +42,9 @@ activeGame={this.props.activeGame}
 hideNavBar={this.hideNavBar.bind(this)}
 showNavBar={this.showNavBar.bind(this)}
 />*/
+
+
+// bien como van variando el game en cons ya sea para games, para el historico o para el activo.
 
 describe('Available games', () => {
   if (Meteor.isServer) return;

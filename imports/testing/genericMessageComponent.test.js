@@ -7,12 +7,15 @@
 /* eslint "react/jsx-filename-extension": [0] */
 /* eslint "import/no-unresolved": [0] */
 
+
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { render } from 'enzyme';
 import { assert } from 'meteor/practicalmeteor:chai';
 import GenericMessage from '../ui/GenericMessage.jsx';
 
+
+// bien, revisan que se renderizen los componentes de un mensaje
 describe('Generic Message', () => {
   if (Meteor.isServer) return;
 

@@ -1,6 +1,8 @@
 /* global $ */
 /* global document*/
 
+// podrian usar algo similar a la firma de un metodo para explicar como cada funcion les ayuda a cambiar el focus .
+
 function restoreFocus() {
   const intr = $('.intro-page');
   const hideable = $('.hideOnSignModal');

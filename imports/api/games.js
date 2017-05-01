@@ -8,6 +8,7 @@ import { check } from 'meteor/check';
 export const Games = new Mongo.Collection('games');
 export default Games;
 
+// interesante manera de publicar los juegos actuales a todos los clientes, con el fin de armar los juegos.
 if (Meteor.isServer) {
   Meteor.publish('games', function gamesPublication() {
     return Games.find({ $or: [
@@ -20,6 +21,8 @@ if (Meteor.isServer) {
     );
   });
 }
+
+// mejor eliminar el codigo que no se este usando
 /*
 game: {
   p1: {_id, username, score}, // datos jugador 1
@@ -37,6 +40,8 @@ game: {
   chat, [] // Arreglo de strings con los mensajes de los jugadores
 }
 */
+
+// funciones de un solo proposito, limpias. Fue facil entender como las usan en conjunto.
 
 function getPointsUp(matrix, i, j) {
   const initial = matrix[i][j];
@@ -82,7 +87,7 @@ function getPoints(matrix, i, j) {
   pts += getPointsDownDiag(matrix, i, j);
   return pts;
 }
-
+// chevere la implementacion del chat
 Meteor.methods({
   'games.newGame': function newGame(p = false) {
     const cols = [];

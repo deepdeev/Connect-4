@@ -10,6 +10,7 @@ import { assert } from 'meteor/practicalmeteor:chai';
 import { resetDatabase } from 'meteor/xolvio:cleaner';
 
 import { Games } from '../api/games.js';
+// escelente, testean acciones posibles durante el desarrollo del juego
 
 if (Meteor.isServer) {
   describe('Games', function () {
@@ -64,7 +65,7 @@ if (Meteor.isServer) {
       const userId2 = Random.id();
       const username2 = 'user2';
       let gameId;
-      const invocation = { userId, username };
+      const invocation = { userId, username }; // invocation no es un nombre tan claro
       const invocation2 = { userId: userId2, username: username2 };
       beforeEach(function () {
         create(false);
@@ -138,6 +139,7 @@ if (Meteor.isServer) {
         assert.equal(Games.find({ winner: { $eq: 'tie' } }).count(), 1);
       });
 
+      // testean el chat.
       describe('chat', function () {
         it('can send message', function () {
           const chat = Meteor.server.method_handlers['games.chat'];

@@ -7,6 +7,7 @@
 /* eslint "react/jsx-filename-extension": [0] */
 /* eslint "import/no-unresolved": [0] */
 
+// bien que atribuyan al proyecto de Edgar y Camila si entendieron algo con ellos.
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Random } from 'meteor/random';

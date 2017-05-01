@@ -1,3 +1,5 @@
+// bien, revisan que se renderize bien el juego, el chat, el footer
+
 /* global Meteor*/
 /* global describe*/
 /* global it*/
